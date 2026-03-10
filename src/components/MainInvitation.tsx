@@ -1,14 +1,25 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import AnimatedTitle from './AnimatedTitle';
 import ScrabbleLetters from './ScrabbleLetters';
 import CROUSLogos from './CROUSLogos';
+import GameUnlocked from './GameUnlocked';
 import './MainInvitation.css';
 
 const MainInvitation = () => {
+  const [gameUnlocked, setGameUnlocked] = useState(false);
+
   const handleOpenClick = () => {
-    alert('🎉 WESH! Bienvenue dans le game Scrabblr CROUSSEUX! 🚀\n\nPrépare ton cerveau, ta swag et tes meilleurs mots!\n\n#TeamCROUS #ScrabbleGang');
-    // Ici on pourrait rediriger vers le jeu ou afficher plus de contenu
+    setGameUnlocked(true);
+    // Petite vibration pour l'effet tactile
+    if (navigator.vibrate) {
+      navigator.vibrate([100, 50, 100]);
+    }
   };
+
+  if (gameUnlocked) {
+    return <GameUnlocked />;
+  }
 
   return (
     <div className="main-container">

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import './CROUSLogos.css';
 
 const CROUSLogos = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   // Noms des fichiers d'images à placer dans le dossier public/images/
   const logos = [
     { id: 1, name: 'crous_logo_top_left.png', position: 'top-left', alt: 'Logo CROUS Bretagne haut gauche' },
@@ -40,13 +41,14 @@ const CROUSLogos = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          {/* Image placeholder - à remplacer par les vraies images */}
+          {/* Logo CROUS réel */}
           <div className="logo-placeholder">
-            <div className="logo-content">
-              <span className="logo-text">🏛️</span>
-              <span className="logo-label">CROUS</span>
-              <span className="logo-subtitle">Bretagne</span>
-            </div>
+            <img 
+               src={`${baseUrl}images/${logo.name}`}
+              alt={logo.alt}
+              className="logo-image"
+              loading="lazy"
+            />
             <div className="logo-glow" />
           </div>
           
