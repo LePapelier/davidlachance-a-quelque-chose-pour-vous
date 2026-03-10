@@ -38,9 +38,7 @@ const MainInvitation = () => {
           <p className="subtitle">
             🎯 Une invitation 100% CROUSSEUSE pour une game de Scrabble légendaire
           </p>
-          <p className="fun-text">
-            👑 Prépare tes meilleurs mots, ton mindset de champion et ta vibe la plus décalée !
-          </p>
+
         </motion.div>
 
         <motion.button
@@ -63,7 +61,7 @@ const MainInvitation = () => {
           transition={{ delay: 1.2, duration: 1 }}
         >
           <p className="instruction">
-            🤯 <strong>Pro tip CROUSSEUX :</strong> Le mot "QI" vaut 11 points, parfait pour flex en amphi !
+            🤯 <strong>Pro tip CROUSSEUX :</strong> Le mot "KA" vaut 11 points, parfait pour flex en amphi !
           </p>
           <div className="fun-facts">
             <motion.div 
@@ -76,7 +74,7 @@ const MainInvitation = () => {
               className="fun-fact"
               whileHover={{ scale: 1.05 }}
             >
-              📈 <strong>Record :</strong> 15 lettres = un kebab gratuit offert
+              📈 <strong>Record :</strong> 475 points
             </motion.div>
           </div>
         </motion.div>

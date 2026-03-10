@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const AnimatedTitle = () => {
-  const titleText = "David La Chance a quelque chose pour vous";
+  const titleText = "David La Chance vous propose une partie de scrabble";
   
   const containerVariants = {
     hidden: { opacity: 0 },
