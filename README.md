@@ -60,12 +60,22 @@ npx prettier --write . # Formater le code
 ### GitHub Pages (automatique via GitHub Actions):
 Le projet inclut une GitHub Action qui déploie automatiquement sur GitHub Pages à chaque push sur la branche `main`.
 
-**URL du site déployé**: `https://[ton-username].github.io/scrabble/`
+**URL du site déployé**: `https://lepapelier.github.io/davidlachance-a-quelque-chose-pour-vous/`
 
 **Pour activer GitHub Pages**:
 1. Va dans les paramètres du dépôt → Pages
 2. Sous "Build and deployment", sélectionne "GitHub Actions"
 3. L'action se déclenchera automatiquement
+
+**Vérifier le déploiement**:
+```bash
+# Tester la page principale
+curl -s -o /dev/null -w "%{http_code}" https://lepapelier.github.io/davidlachance-a-quelque-chose-pour-vous/
+
+# Tester les assets (JS, CSS)
+curl -s -o /dev/null -w "%{http_code}" https://lepapelier.github.io/davidlachance-a-quelque-chose-pour-vous/assets/index-DjSrdrpA.js
+curl -s -o /dev/null -w "%{http_code}" https://lepapelier.github.io/davidlachance-a-quelque-chose-pour-vous/assets/index-CsbaFnrn.css
+```
 
 **Déploiement manuel**:
 ```bash
@@ -83,11 +93,13 @@ npm run deploy        # Build et déploie sur gh-pages
 2. **Animations lag**: Réduis le nombre de lettres animées
 3. **Build échoue**: Lance `npm run build` pour voir les erreurs
 4. **Styles cassés**: Vérifie l'ordre des imports CSS
+5. **Erreurs 404 sur les assets**: Vérifie la configuration `base` dans `vite.config.ts` (doit correspondre au nom du dépôt GitHub)
 
 ### Solutions:
 - Les placeholders s'affichent si les images sont manquantes
 - Redémarre le serveur de dev après avoir ajouté les images
 - Consulte la console navigateur pour les erreurs
+- Pour les erreurs 404 d'assets: vérifie que `vite.config.ts` a `base: '/davidlachance-a-quelque-chose-pour-vous/'` (nom du dépôt)
 
 ## 📝 Structure des composants
 
