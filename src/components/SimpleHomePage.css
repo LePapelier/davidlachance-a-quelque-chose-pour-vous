@@ -67,46 +67,6 @@
   font-style: italic;
 }
 
-.refuse-button {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 8px 20px;
-  font-size: 1rem;
-  border-radius: 0;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: inherit;
-  margin-left: 10px;
-}
-
-.refuse-button:hover:not(:disabled) {
-  background: #c0392b;
-}
-
-.refuse-button:active:not(:disabled) {
-  transform: translateY(2px);
-}
-
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.refuse-message {
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #e74c3c;
-  animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 @media (max-width: 600px) {
   .simple-content {
     padding: 20px;
@@ -114,14 +74,5 @@
   
   .simple-title {
     font-size: 1.4rem;
-  }
-  
-  .buttons-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .refuse-button {
-    margin-left: 0;
   }
 }

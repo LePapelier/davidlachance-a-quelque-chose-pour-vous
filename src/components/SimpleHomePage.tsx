@@ -7,31 +7,10 @@ interface SimpleHomePageProps {
 
 const SimpleHomePage = ({ onDiscover }: SimpleHomePageProps) => {
   const [clicked, setClicked] = useState(false);
-  const [refused, setRefused] = useState(false);
-  const [insultMessage, setInsultMessage] = useState('');
 
   const handleClick = () => {
     setClicked(true);
     setTimeout(() => onDiscover(), 300);
-  };
-
-  const handleRefuse = () => {
-    setRefused(true);
-    const insults = [
-      'T\'es naze fréro 👎',
-      'Grave raté le jeu 👎',
-      'T\'as peur du Scrabble? 👎',
-      'Ptdr t\'es trop nul 👎',
-      'Même ta grand-mère joue mieux 👎'
-    ];
-    const randomInsult = insults[Math.floor(Math.random() * insults.length)];
-    setInsultMessage(randomInsult);
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setRefused(false);
-      setInsultMessage('');
-    }, 3000);
   };
 
   return (
@@ -43,29 +22,13 @@ const SimpleHomePage = ({ onDiscover }: SimpleHomePageProps) => {
         
         <div className="simple-spacer" />
         
-        <div className="buttons-container">
-          <button 
-            className={`simple-button ${clicked ? 'clicked' : ''}`}
-            onClick={handleClick}
-            disabled={clicked || refused}
-          >
-            {clicked ? '🎯 Chargement...' : 'découvrir'}
-          </button>
-          
-          <button 
-            className="refuse-button"
-            onClick={handleRefuse}
-            disabled={clicked || refused}
-          >
-            refuser 👎
-          </button>
-        </div>
-        
-        {insultMessage && (
-          <div className="refuse-message">
-            {insultMessage}
-          </div>
-        )}
+        <button 
+          className={`simple-button ${clicked ? 'clicked' : ''}`}
+          onClick={handleClick}
+          disabled={clicked}
+        >
+          {clicked ? '🎯 Chargement...' : 'découvrir'}
+        </button>
         
         <div className="simple-footer">
           <p className="simple-hint">
