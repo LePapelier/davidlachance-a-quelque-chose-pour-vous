@@ -1,0 +1,290 @@
+.crous-logos-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.crous-logo {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  pointer-events: auto;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo-placeholder {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 0 2px rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.crous-logo:hover .logo-placeholder {
+  transform: translateZ(20px);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 0 3px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.15));
+}
+
+.logo-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.crous-logo:hover .logo-glow {
+  opacity: 1;
+}
+
+.logo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.logo-text {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.logo-label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #ffd166, #ff9e6d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+}
+
+.logo-caption {
+  position: absolute;
+  bottom: -40px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.crous-logo:hover .logo-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Badge central CROUS */
+.crous-center-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  pointer-events: none;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.badge-content {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.badge-emoji {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.badge-text {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.badge-hashtag {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .crous-logo {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .logo-placeholder {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+  }
+  
+  .logo-text {
+    font-size: 1.8rem;
+  }
+  
+  .logo-label {
+    font-size: 0.9rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .logo-caption {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+    bottom: -35px;
+  }
+  
+  .crous-center-badge {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .badge-emoji {
+    font-size: 2.5rem;
+  }
+  
+  .badge-text {
+    font-size: 0.9rem;
+  }
+  
+  .badge-hashtag {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .crous-logo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .logo-placeholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .logo-label {
+    font-size: 0.7rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.6rem;
+    display: none;
+  }
+  
+  .logo-caption {
+    display: none;
+  }
+  
+  .crous-center-badge {
+    display: none;
+  }
+}
+
+/* Animations spécifiques pour chaque coin */
+.crous-logo.top-left {
+  animation: floatTopLeft 6s ease-in-out infinite;
+}
+
+.crous-logo.top-right {
+  animation: floatTopRight 7s ease-in-out infinite;
+}
+
+.crous-logo.bottom-left {
+  animation: floatBottomLeft 8s ease-in-out infinite;
+}
+
+.crous-logo.bottom-right {
+  animation: floatBottomRight 9s ease-in-out infinite;
+}
+
+@keyframes floatTopLeft {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes floatTopRight {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(-2deg); }
+}
+
+@keyframes floatBottomLeft {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(1deg); }
+}
+
+@keyframes floatBottomRight {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-1deg); }
+}
