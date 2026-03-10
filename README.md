@@ -64,8 +64,11 @@ Le projet inclut une GitHub Action qui déploie automatiquement sur GitHub Pages
 
 **Pour activer GitHub Pages**:
 1. Va dans les paramètres du dépôt → Pages
-2. Sous "Build and deployment", sélectionne "GitHub Actions"
-3. L'action se déclenchera automatiquement
+2. Sous "Build and deployment", sélectionne **GitHub Actions**
+3. Si ce n'est pas déjà fait, sélectionne le workflow `Deploy to GitHub Pages`
+4. Le site sera automatiquement déployé à chaque push sur `main`
+
+**Note**: L'action utilise `peaceiris/actions-gh-pages@v4` qui déploie sur la branche `gh-pages`. Assure-toi que cette branche est configurée comme source dans les paramètres Pages si l'action ne le fait pas automatiquement.
 
 **Vérifier le déploiement**:
 ```bash
@@ -94,12 +97,18 @@ npm run deploy        # Build et déploie sur gh-pages
 3. **Build échoue**: Lance `npm run build` pour voir les erreurs
 4. **Styles cassés**: Vérifie l'ordre des imports CSS
 5. **Erreurs 404 sur les assets**: Vérifie la configuration `base` dans `vite.config.ts` (doit correspondre au nom du dépôt GitHub)
+6. **Workflow GitHub Actions échoue**:
+   - Vérifie les logs de l'action dans l'onglet "Actions" du dépôt
+   - Assure-toi que GitHub Pages est activé dans les paramètres du dépôt
+   - Vérifie que le token `GITHUB_TOKEN` a les permissions d'écriture
+   - Le workflow nécessite Node.js 18+ et npm
 
 ### Solutions:
 - Les placeholders s'affichent si les images sont manquantes
 - Redémarre le serveur de dev après avoir ajouté les images
 - Consulte la console navigateur pour les erreurs
 - Pour les erreurs 404 d'assets: vérifie que `vite.config.ts` a `base: '/davidlachance-a-quelque-chose-pour-vous/'` (nom du dépôt)
+- Pour l'échec du workflow: vérifie que la branche `gh-pages` existe et est configurée comme source dans GitHub Pages
 
 ## 📝 Structure des composants
 
