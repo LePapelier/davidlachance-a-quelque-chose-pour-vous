@@ -24,7 +24,7 @@ const MainInvitation = () => {
   return (
     <div className="main-container">
       <CROUSLogos />
-      <ScrabbleLetters count={15} />
+      <ScrabbleLetters count={30} />
       
       <div className="content-wrapper">
         <AnimatedTitle />
@@ -61,7 +61,7 @@ const MainInvitation = () => {
           transition={{ delay: 1.2, duration: 1 }}
         >
           <p className="instruction">
-            🤯 <strong>Pro tip CROUSSEUX :</strong> Le mot "KA" vaut 11 points, parfait pour flex en amphi !
+            🤯 <strong>Pro tip CROUSSEUX :</strong> Le mot "KA" vaut 11 points, idéal pour briller en cours de philo !
           </p>
           <div className="fun-facts">
             <motion.div 
@@ -74,7 +74,7 @@ const MainInvitation = () => {
               className="fun-fact"
               whileHover={{ scale: 1.05 }}
             >
-              📈 <strong>Record :</strong> 475 points
+              📈 <strong>Record :</strong> 505 points - David La Chance t'invite au RU si tu le bats 🍽️
             </motion.div>
           </div>
         </motion.div>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import CROUSLogos from './CROUSLogos';
+
 import './GameUnlocked.css';
 
 interface ScrabbleWordProps {
@@ -87,7 +88,7 @@ const GameUnlocked = () => {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <p className="congrats-text">
-            TROP COOL FRÉROT! 🚀
+              MÉGA COOL FRÉROT/FRÉROTTE! 🚀
           </p>
           <p className="message-text">
             Tu viens d'entrer dans la zone VIP du Scrabble CROUSSEUX
@@ -96,9 +97,8 @@ const GameUnlocked = () => {
 
         {/* Mots en lettres Scrabble */}
         <div className="scrabble-words-container">
-          <ScrabbleWord word="TROP" delay={0.8} />
+          <ScrabbleWord word="MÉGA" delay={0.8} />
           <ScrabbleWord word="COOL" delay={1.2} />
-          <ScrabbleWord word="BRO" delay={1.6} />
         </div>
 
         {/* Message apparaissant */}
@@ -111,7 +111,7 @@ const GameUnlocked = () => {
           >
             <div className="message-bubble">
               <p className="bubble-text">
-                 🎯 <strong>Mission accomplie!</strong> T'es maintenant officiellement un scrabbleur crousseux certifié!
+                  🎯 <strong>Mission accomplie!</strong> T'es maintenant officiellement prêt à devenir un scrabbleur crousseux certifié!
               </p>
               <p className="bubble-subtext">
                 Prêt à défoncer le game avec tes meilleurs mots? 🔥
@@ -165,7 +165,7 @@ const GameUnlocked = () => {
           transition={{ delay: 3, duration: 1 }}
         >
           <p className="back-text">
-            💫 La game continue... Prépare tes meilleurs mots!
+             💫 C'est parti... Prépare tes meilleurs mots!
           </p>
         </motion.div>
       </div>
