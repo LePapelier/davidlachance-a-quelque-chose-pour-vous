@@ -231,6 +231,9 @@
   
   .button-text {
     font-size: 1.5rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.2;
   }
   
   .fun-fact {
@@ -259,5 +262,8 @@
   
   .button-text {
     font-size: 1.3rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.2;
   }
 }

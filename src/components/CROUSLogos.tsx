@@ -12,10 +12,10 @@ const CROUSLogos = () => {
   ];
 
   const positions = {
-    'top-left': { top: '20px', left: '20px' },
-    'top-right': { top: '20px', right: '20px' },
-    'bottom-left': { bottom: '20px', left: '20px' },
-    'bottom-right': { bottom: '20px', right: '20px' },
+    'top-left': { top: '30px', left: '30px' },
+    'top-right': { top: '30px', right: '30px' },
+    'bottom-left': { bottom: '30px', left: '30px' },
+    'bottom-right': { bottom: '30px', right: '30px' },
   };
 
   return (

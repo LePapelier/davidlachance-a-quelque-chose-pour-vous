@@ -88,7 +88,7 @@ const GameUnlocked = () => {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <p className="congrats-text">
-              MÉGA COOL FRÉROT/FRÉROTTE! 🚀
+              TROP COOL FRÉROT/FRÉROTTE! 🚀
           </p>
           <p className="message-text">
             Tu viens d'entrer dans la zone VIP du Scrabble CROUSSEUX
@@ -110,11 +110,8 @@ const GameUnlocked = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="message-bubble">
-              <p className="bubble-text">
-                  🎯 <strong>Mission accomplie!</strong> T'es maintenant officiellement prêt à devenir un scrabbleur crousseux certifié!
-              </p>
-              <p className="bubble-subtext">
-                Prêt à défoncer le game avec tes meilleurs mots? 🔥
+               <p className="bubble-text">
+                  GO DM David la chance sur WhatsApp 👆📱
               </p>
             </div>
           </motion.div>

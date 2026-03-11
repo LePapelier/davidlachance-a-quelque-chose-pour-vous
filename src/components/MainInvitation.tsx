@@ -8,18 +8,83 @@ import './MainInvitation.css';
 
 const MainInvitation = () => {
   const [gameUnlocked, setGameUnlocked] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleOpenClick = () => {
-    setGameUnlocked(true);
+    setLoading(true);
     // Petite vibration pour l'effet tactile
     if (navigator.vibrate) {
       navigator.vibrate([100, 50, 100]);
     }
+    // Faux chargement de 5 secondes
+    setTimeout(() => {
+      setGameUnlocked(true);
+      setLoading(false);
+    }, 5000);
   };
+
+  const LoadingScreen = () => {
+    return (
+      <div className="main-container">
+        <CROUSLogos />
+        <div className="content-wrapper">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              fontSize: 'clamp(2rem, 5vw, 3rem)',
+              fontWeight: 900,
+              background: 'linear-gradient(90deg, #ff00cc, #3333ff, #00ccff)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              marginBottom: '2rem',
+            }}
+          >
+            🚀 CHARGEMENT DE LA GAME...
+          </motion.h1>
+          <motion.div 
+            style={{
+              width: '100%',
+              height: '20px',
+              backgroundColor: 'rgba(255,255,255,0.2)',
+              borderRadius: '10px',
+              overflow: 'hidden',
+              marginTop: '2rem',
+            }}
+          >
+            <motion.div
+              initial={{ width: '0%' }}
+              animate={{ width: '100%' }}
+              transition={{ duration: 5, ease: 'linear' }}
+              style={{
+                height: '100%',
+                background: 'linear-gradient(90deg, #ff00cc, #3333ff, #00ccff)',
+                borderRadius: '10px',
+              }}
+            />
+          </motion.div>
+          <p style={{
+            marginTop: '1rem',
+            color: 'rgba(255,255,255,0.8)',
+            fontSize: '1rem',
+            fontStyle: 'italic',
+          }}>
+            Spoiler: ça va être trop ouf frérot 🔥
+          </p>
+        </div>
+      </div>
+    );
+  };
+  if (loading) {
+    return <LoadingScreen />;
+  }
 
   if (gameUnlocked) {
     return <GameUnlocked />;
   }
+
+
 
   return (
     <div className="main-container">
@@ -61,14 +126,14 @@ const MainInvitation = () => {
           transition={{ delay: 1.2, duration: 1 }}
         >
           <p className="instruction">
-            🤯 <strong>Pro tip CROUSSEUX :</strong> Le mot "KA" vaut 11 points, idéal pour briller en cours de philo !
+            🤯 <strong>Pro tip CROUSSEUX :</strong> Le mot "KA" vaut 11 points
           </p>
           <div className="fun-facts">
             <motion.div 
               className="fun-fact"
               whileHover={{ scale: 1.05 }}
             >
-              🎮 <strong>Fun fact :</strong> Le Scrabble &gt; Netflix pendant les TP
+               🧠 <strong>Fun fact :</strong> Le Scrabble stimule les fonctions neuro cognitives
             </motion.div>
             <motion.div 
               className="fun-fact"

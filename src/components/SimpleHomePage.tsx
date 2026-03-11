@@ -27,7 +27,7 @@ const SimpleHomePage = ({ onDiscover }: SimpleHomePageProps) => {
           onClick={handleClick}
           disabled={clicked}
         >
-          {clicked ? '🎯 Chargement...' : 'découvrir'}
+          {clicked ? 'Chargement...' : 'découvrir'}
         </button>
         
         <div className="simple-footer">
