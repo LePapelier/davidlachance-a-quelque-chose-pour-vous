@@ -1,6 +1,13 @@
 .main-container {
   min-height: 100vh;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96e6a1, #feca57);
+  background: linear-gradient(
+    45deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96e6a1,
+    #feca57
+  );
   background-size: 400% 400%;
   position: relative;
   overflow: hidden;
@@ -9,15 +16,26 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   color: white;
   animation: gradientBG 15s ease infinite;
 }
 
 @keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .content-wrapper {
@@ -26,11 +44,11 @@
   text-align: center;
   z-index: 2;
   position: relative;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(20px);
   border-radius: 32px;
   padding: 3rem 2rem;
-  box-shadow: 
+  box-shadow:
     0 25px 50px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.1);
@@ -76,7 +94,7 @@
   align-items: center;
   gap: 0.5rem;
   margin: 2rem auto;
-  box-shadow: 
+  box-shadow:
     0 10px 30px rgba(255, 0, 204, 0.4),
     0 0 0 4px rgba(255, 255, 255, 0.2),
     0 0 20px rgba(51, 51, 255, 0.6);
@@ -84,26 +102,35 @@
   position: relative;
   overflow: hidden;
   min-width: 300px;
-  animation: gradientMove 3s ease infinite, pulseGlow 2s ease-in-out infinite;
+  animation:
+    gradientMove 3s ease infinite,
+    pulseGlow 2s ease-in-out infinite;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { 
-    box-shadow: 
+  0%,
+  100% {
+    box-shadow:
       0 10px 30px rgba(255, 0, 204, 0.4),
       0 0 0 4px rgba(255, 255, 255, 0.2),
       0 0 20px rgba(51, 51, 255, 0.6);
   }
-  50% { 
-    box-shadow: 
+  50% {
+    box-shadow:
       0 15px 40px rgba(255, 0, 204, 0.6),
       0 0 0 6px rgba(255, 255, 255, 0.3),
       0 0 30px rgba(51, 51, 255, 0.8);
@@ -111,13 +138,18 @@
 }
 
 .open-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.7s;
 }
 
@@ -148,7 +180,7 @@
   margin-bottom: 2rem;
   color: #a8e6cf;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 12px;
   border-left: 4px solid #4ecdc4;
 }
@@ -162,7 +194,7 @@
 }
 
 .fun-fact {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   padding: 1.2rem 1.5rem;
   border-radius: 20px;
   font-size: 0.95rem;
@@ -178,7 +210,7 @@
 }
 
 .fun-fact::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -190,9 +222,9 @@
 }
 
 .fun-fact:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-8px) rotateX(5deg);
-  box-shadow: 
+  box-shadow:
     0 15px 30px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
@@ -214,32 +246,32 @@
     padding: 2rem 1rem;
     margin: 1rem;
   }
-  
+
   .subtitle {
     font-size: 1.2rem;
   }
-  
+
   .fun-text {
     font-size: 1rem;
   }
-  
+
   .open-button {
     padding: 1rem 2rem;
     font-size: 1.3rem;
     min-width: 250px;
   }
-  
+
   .button-text {
     font-size: 1.5rem;
     white-space: normal;
     overflow-wrap: break-word;
     line-height: 1.2;
   }
-  
+
   .fun-fact {
     min-width: 100%;
   }
-  
+
   .instruction {
     font-size: 1rem;
   }
@@ -249,17 +281,17 @@
   .main-container {
     padding: 1rem;
   }
-  
+
   .content-wrapper {
     padding: 1.5rem 1rem;
   }
-  
+
   .open-button {
     padding: 0.8rem 1rem;
     font-size: 1rem;
     min-width: 180px;
   }
-  
+
   .button-text {
     font-size: 1.1rem;
     white-space: normal;
@@ -275,7 +307,7 @@
     font-size: 0.9rem;
     min-width: 160px;
   }
-  
+
   .button-text {
     font-size: 1rem;
   }

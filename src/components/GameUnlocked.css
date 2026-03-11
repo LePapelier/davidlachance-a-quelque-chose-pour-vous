@@ -1,6 +1,13 @@
 .game-unlocked-container {
   min-height: 100vh;
-  background: linear-gradient(45deg, #ff00cc, #3333ff, #00ccff, #00ff99, #ffcc00);
+  background: linear-gradient(
+    45deg,
+    #ff00cc,
+    #3333ff,
+    #00ccff,
+    #00ff99,
+    #ffcc00
+  );
   background-size: 400% 400%;
   position: relative;
   overflow: hidden;
@@ -9,15 +16,26 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   color: white;
   animation: gradientBG 10s ease infinite;
 }
 
 @keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .game-content-wrapper {
@@ -26,11 +44,11 @@
   text-align: center;
   z-index: 2;
   position: relative;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(20px);
   border-radius: 32px;
   padding: 3rem 2rem;
-  box-shadow: 
+  box-shadow:
     0 25px 50px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.1);
@@ -49,20 +67,36 @@
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
   padding: 0 1rem;
-  animation: titlePop 0.8s ease-out, titlePulse 2s ease-in-out infinite 1s;
+  animation:
+    titlePop 0.8s ease-out,
+    titlePulse 2s ease-in-out infinite 1s;
   text-align: center;
   line-height: 1.2;
 }
 
 @keyframes titlePop {
-  0% { transform: scale(0); opacity: 0; }
-  70% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes titlePulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 /* Sous-titre animé */
@@ -80,8 +114,13 @@
 }
 
 @keyframes textPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .message-text {
@@ -116,7 +155,7 @@
   font-weight: 900;
   color: #2c3e50;
   text-transform: uppercase;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
 }
 
 .tile-front {
@@ -129,11 +168,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 
+  box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.6),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   border: 2px solid #d4ac0d;
+  opacity: 1;
 }
 
 .tile-letter {
@@ -141,7 +181,7 @@
   font-weight: 900;
   color: #2c3e50;
   text-transform: uppercase;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
 }
 
 .tile-value {
@@ -171,7 +211,7 @@
 }
 
 .message-bubble {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 1.5rem;
@@ -199,7 +239,7 @@
 }
 
 .whatsapp-card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 25px;
   padding: 2rem;
@@ -221,15 +261,22 @@
 }
 
 @keyframes phoneShake {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-5deg); }
-  75% { transform: rotate(5deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
 }
 
 .whatsapp-title {
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #25D366, #128C7E);
+  background: linear-gradient(90deg, #25d366, #128c7e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -251,11 +298,12 @@
 }
 
 @keyframes phoneGlow {
-  0%, 100% { 
+  0%,
+  100% {
     filter: drop-shadow(0 0 5px rgba(37, 211, 102, 0.5));
     transform: scale(1);
   }
-  50% { 
+  50% {
     filter: drop-shadow(0 0 20px rgba(37, 211, 102, 0.8));
     transform: scale(1.1);
   }
@@ -271,7 +319,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(90deg, #25D366, #128C7E);
+  background: linear-gradient(90deg, #25d366, #128c7e);
   border: none;
   border-radius: 50px;
   padding: 1.2rem 3rem;
@@ -281,7 +329,7 @@
   font-weight: 700;
   margin: 1rem auto;
   max-width: 400px;
-  box-shadow: 
+  box-shadow:
     0 10px 30px rgba(37, 211, 102, 0.4),
     0 0 0 4px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
@@ -291,19 +339,24 @@
 
 .whatsapp-button:hover {
   transform: translateY(-3px);
-  box-shadow: 
+  box-shadow:
     0 15px 40px rgba(37, 211, 102, 0.6),
     0 0 0 6px rgba(255, 255, 255, 0.3);
 }
 
 .whatsapp-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.7s;
 }
 
@@ -340,7 +393,7 @@
   margin-bottom: 0.8rem;
   color: rgba(255, 255, 255, 0.8);
   padding-left: 1rem;
-  border-left: 3px solid #25D366;
+  border-left: 3px solid #25d366;
 }
 
 /* Confetti */
@@ -376,7 +429,7 @@
 }
 
 .back-button {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.4);
   color: white;
   padding: 0.8rem 2rem;
@@ -389,7 +442,7 @@
 }
 
 .back-button:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
 
@@ -399,42 +452,42 @@
     padding: 2rem 1rem;
     margin: 1rem;
   }
-  
+
   .congrats-text {
     font-size: 2rem;
   }
-  
+
   .message-text {
     font-size: 1.1rem;
   }
-  
+
   .scrabble-tile {
     width: 50px;
     height: 50px;
   }
-  
+
   .tile-letter {
     font-size: 1.5rem;
   }
-  
+
   .whatsapp-title {
     font-size: 1.4rem;
   }
-  
+
   .finger-pointer {
     font-size: 2rem;
     gap: 1rem;
   }
-  
+
   .phone-emoji {
     font-size: 3rem;
   }
-  
+
   .whatsapp-button {
     padding: 1rem 2rem;
     font-size: 1.1rem;
   }
-  
+
   .button-text {
     font-size: 1.3rem;
   }
@@ -444,59 +497,59 @@
   .game-unlocked-container {
     padding: 1rem;
   }
-  
+
   .game-content-wrapper {
     padding: 1.5rem 1rem;
   }
-  
+
   .explosive-title h1 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
-  
+
   .congrats-text {
     font-size: 1.5rem;
   }
-  
+
   .scrabble-tile {
     width: 45px;
     height: 45px;
   }
-  
+
   .tile-letter {
     font-size: 1.3rem;
   }
-  
+
   .scrabble-words-container {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .scrabble-word {
     margin-bottom: 0.5rem;
   }
-  
+
   .whatsapp-card {
     padding: 1.5rem 1rem;
   }
-  
+
   .whatsapp-title {
     font-size: 1.2rem;
   }
-  
+
   .finger-pointer {
     font-size: 1.5rem;
   }
-  
+
   .phone-emoji {
     font-size: 2rem;
   }
-  
+
   .whatsapp-button {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
-  
+
   .button-text {
     font-size: 1.1rem;
   }
