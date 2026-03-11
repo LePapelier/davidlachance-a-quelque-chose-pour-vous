@@ -396,6 +396,29 @@
   border-left: 3px solid #25d366;
 }
 
+.whatsapp-note {
+  text-align: center;
+  margin: 1.5rem auto;
+  max-width: 500px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 2px solid rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-note p {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.note-subtext {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
 /* Confetti */
 .confetti-container {
   position: absolute;
@@ -490,6 +513,14 @@
 
   .button-text {
     font-size: 1.3rem;
+  }
+
+  .whatsapp-note {
+    padding: 1rem;
+  }
+
+  .whatsapp-note p {
+    font-size: 1.1rem;
   }
 }
 

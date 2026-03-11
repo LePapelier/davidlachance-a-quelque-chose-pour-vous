@@ -325,7 +325,6 @@ const RainLetters = () => {
 };
 
 const GameUnlocked = () => {
-  const [showMessage, setShowMessage] = useState(false);
   const [confettiItems] = useState<
     Array<{ id: number; x: number; left: number; colorIndex: number }>
   >(() =>
@@ -336,13 +335,6 @@ const GameUnlocked = () => {
       colorIndex: Math.floor(Math.random() * 5),
     })),
   );
-
-  useEffect(() => {
-    const timer1 = setTimeout(() => setShowMessage(true), 1000);
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
 
   return (
     <div className="game-unlocked-container">
@@ -373,7 +365,7 @@ const GameUnlocked = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <p className="congrats-text">TROP COOL FRÉROT/FRÉROTTE! 🚀</p>
+          <p className="congrats-text">TROP COOL FRÉROT/FRÉROTTE !</p>
           <p className="message-text">
             Tu viens d'entrer dans la zone VIP du Scrabble CROUSSEUX
           </p>
@@ -384,22 +376,6 @@ const GameUnlocked = () => {
           <ScrabbleWord word="MEGA" delay={0.8} />
           <ScrabbleWord word="COOL" delay={1.2} />
         </div>
-
-        {/* Message apparaissant */}
-        {showMessage && (
-          <motion.div
-            className="unlocked-message"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="message-bubble">
-              <p className="bubble-text">
-                GO DM David la chance sur WhatsApp 👆📱
-              </p>
-            </div>
-          </motion.div>
-        )}
 
         {/* Section WhatsApp */}
         <motion.div
@@ -412,31 +388,8 @@ const GameUnlocked = () => {
             <div className="whatsapp-header">
               <div className="whatsapp-icon">📱</div>
               <h2 className="whatsapp-title">CONTACTE DAVID LA CHANCE</h2>
+              <div className="whatsapp-icon">📱</div>
             </div>
-
-            <div className="finger-pointer">
-              <span>👇</span>
-              <div className="phone-emoji">📞</div>
-              <span>👇</span>
-            </div>
-
-            <p className="whatsapp-instruction">
-              Clique sur le bouton ci‑dessous pour ouvrir WhatsApp et envoyer un
-              message direct à David
-            </p>
-
-            <a
-              href="https://wa.me/33612345678?text=Salut%20David%20!%20Je%20viens%20de%20débloquer%20la%20game%20Scrabble%20CROUSSEUX%20🔥"
-              className="whatsapp-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="button-icon">💬</div>
-              <div className="button-text">Envoyer un message WhatsApp</div>
-              <div className="button-subtext">
-                (C'est gratuit et ça déchire)
-              </div>
-            </a>
 
             <div className="whatsapp-tips">
               <div className="tip">
@@ -446,9 +399,6 @@ const GameUnlocked = () => {
               <div className="tip">
                 🎯 <strong>Objectif :</strong> Fixe une date pour la game
                 légendaire
-              </div>
-              <div className="tip">
-                🏆 <strong>Bonus :</strong> Mentionne ton mot Scrabble préféré
               </div>
             </div>
           </div>
@@ -502,7 +452,7 @@ const GameUnlocked = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 1 }}
         >
-          <p className="back-text">💫 Prépare tes meilleurs words!</p>
+          <p className="back-text">💫 Prépare tes meilleurs words! 🤙</p>
         </motion.div>
       </div>
     </div>

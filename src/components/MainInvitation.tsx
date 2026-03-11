@@ -102,7 +102,7 @@ const MainInvitation = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           <p className="subtitle">
-            🎯 Une invitation 100% CROUSSEUSE pour une game de Scrabble légendaire
+            Une invitation 100% CROUSSEUSE pour une game de Scrabble légendaire
           </p>
 
         </motion.div>
