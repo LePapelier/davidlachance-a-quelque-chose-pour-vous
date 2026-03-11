@@ -6,23 +6,6 @@ import CROUSLogos from './CROUSLogos';
 import GameUnlocked from './GameUnlocked';
 import './MainInvitation.css';
 
-const MainInvitation = () => {
-  const [gameUnlocked, setGameUnlocked] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleOpenClick = () => {
-    setLoading(true);
-    // Petite vibration pour l'effet tactile
-    if (navigator.vibrate) {
-      navigator.vibrate([100, 50, 100]);
-    }
-    // Faux chargement de 5 secondes
-    setTimeout(() => {
-      setGameUnlocked(true);
-      setLoading(false);
-    }, 5000);
-  };
-
   const LoadingScreen = () => {
     return (
       <div className="main-container">
@@ -70,12 +53,30 @@ const MainInvitation = () => {
             fontSize: '1rem',
             fontStyle: 'italic',
           }}>
-            Spoiler: ça va être trop ouf frérot 🔥
+            Spoiler: ça va être une dinguerie 🔥
           </p>
         </div>
       </div>
     );
   };
+
+const MainInvitation = () => {
+  const [gameUnlocked, setGameUnlocked] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleOpenClick = () => {
+    setLoading(true);
+    // Petite vibration pour l'effet tactile
+    if (navigator.vibrate) {
+      navigator.vibrate([100, 50, 100]);
+    }
+    // Faux chargement de 5 secondes
+    setTimeout(() => {
+      setGameUnlocked(true);
+      setLoading(false);
+    }, 5000);
+  };
+
   if (loading) {
     return <LoadingScreen />;
   }
@@ -116,7 +117,7 @@ const MainInvitation = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <span className="button-text">🔥 DÉBLOQUER LA GAME</span>
-          <span className="button-hint">(Spoiler: c'est trop ouf frérot 🚀)</span>
+          <span className="button-hint">(Spoiler: c'est un truc de ouf)</span>
         </motion.button>
 
         <motion.div
@@ -128,23 +129,33 @@ const MainInvitation = () => {
           <p className="instruction">
             🤯 <strong>Pro tip CROUSSEUX :</strong> Le mot "KA" vaut 11 points
           </p>
-          <div className="fun-facts">
-            <motion.div 
-              className="fun-fact"
-              whileHover={{ scale: 1.05 }}
-            >
-               🧠 <strong>Fun fact :</strong> Le Scrabble stimule les fonctions neuro cognitives
-            </motion.div>
-            <motion.div 
-              className="fun-fact"
-              whileHover={{ scale: 1.05 }}
-            >
-              📈 <strong>Record :</strong> 505 points - David La Chance t'invite au RU si tu le bats 🍽️
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
 
+          <div className="fun-facts">
+
+            <motion.div 
+              className="fun-fact"
+              whileHover={{ scale: 1.05 }}
+            >
+              🧠 <strong>Fun fact :</strong> Le Scrabble stimule les fonctions neuro cognitives
+            </motion.div>
+
+            <motion.div 
+              className="fun-fact"
+              whileHover={{ scale: 1.05 }}
+            >
+              🏆 <strong>Un RU à gagner :</strong> David La Chance t'invite au RU si tu le bats 🍽️
+            </motion.div>
+
+            <motion.div 
+              className="fun-fact"
+              whileHover={{ scale: 1.05 }}
+            >
+              📈 <strong>Record :</strong> 505 points - Deviendras-tu le nouveau champion du CROUS ?
+            </motion.div>
+
+          </div>
+        </motion.div>      
+      </div>
       <div className="footer-note">
         <motion.p
           animate={{ opacity: [0.5, 1, 0.5] }}

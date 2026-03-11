@@ -45,7 +45,7 @@
   z-index: 2;
   position: relative;
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   border-radius: 32px;
   padding: 3rem 2rem;
   box-shadow:
@@ -172,7 +172,7 @@
 .extra-content {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .instruction {
@@ -202,7 +202,7 @@
   min-width: 250px;
   max-width: 350px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
   position: relative;

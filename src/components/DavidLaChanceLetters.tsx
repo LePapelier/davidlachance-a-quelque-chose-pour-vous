@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import './ScrabbleLetters.css';
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import "./ScrabbleLetters.css";
 
 interface LetterProps {
   char: string;
@@ -15,7 +15,7 @@ const DavidLaChanceLetter = ({ char, x, y, delay, size }: LetterProps) => {
     <motion.div
       className="scrabble-letter"
       style={{
-        position: 'absolute',
+        position: "absolute",
         left: `${x}%`,
         top: `${y}%`,
         width: `${size}px`,
@@ -23,8 +23,8 @@ const DavidLaChanceLetter = ({ char, x, y, delay, size }: LetterProps) => {
         zIndex: 1,
       }}
       initial={{ opacity: 0, scale: 0 }}
-      animate={{ 
-        opacity: 1, 
+      animate={{
+        opacity: 1,
         scale: 1,
         y: [0, -10, 0],
         rotate: [0, 2, -2, 0],
@@ -46,20 +46,23 @@ const DavidLaChanceLetter = ({ char, x, y, delay, size }: LetterProps) => {
           repeat: Infinity,
           repeatType: "reverse",
           ease: "easeInOut",
-        }
+        },
       }}
-      whileHover={{ 
+      whileHover={{
         scale: 1.5,
         rotate: [0, -10, 10, 0],
-        transition: { duration: 0.4 }
+        transition: { duration: 0.4 },
       }}
     >
       <div className="letter-front">
-        <div className="letter-main" style={{ 
-          fontSize: `${size * 0.5}px`,
-          color: char === ' ' ? 'transparent' : '#2c3e50'
-        }}>
-          {char === ' ' ? '·' : char}
+        <div
+          className="letter-main"
+          style={{
+            fontSize: `${size * 0.5}px`,
+            color: char === " " ? "transparent" : "#2c3e50",
+          }}
+        >
+          {char === " " ? "·" : char}
         </div>
       </div>
       <div className="letter-shadow" />
@@ -68,19 +71,21 @@ const DavidLaChanceLetter = ({ char, x, y, delay, size }: LetterProps) => {
 };
 
 const DavidLaChanceLetters = () => {
-  const [letters, setLetters] = useState<Array<{
-    char: string;
-    x: number;
-    y: number;
-    delay: number;
-    size: number;
-  }>>([]);
+  const [letters, setLetters] = useState<
+    Array<{
+      char: string;
+      x: number;
+      y: number;
+      delay: number;
+      size: number;
+    }>
+  >([]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       const text = "David La Chance";
-      const chars = text.split('');
-      const newLetters = chars.map((char, _index) => ({
+      const chars = text.split("");
+      const newLetters = chars.map((char) => ({
         char,
         x: Math.random() * 80 + 10, // 10% to 90%
         y: Math.random() * 80 + 10,
@@ -89,15 +94,15 @@ const DavidLaChanceLetters = () => {
       }));
       setLetters(newLetters);
     }, 0);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="scrabble-letters-container">
-      {letters.map((letter, _index) => (
+      {letters.map((letter, index) => (
         <DavidLaChanceLetter
-          key={_index}
+          key={index}
           char={letter.char}
           x={letter.x}
           y={letter.y}
