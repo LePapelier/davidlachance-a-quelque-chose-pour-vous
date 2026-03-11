@@ -79,7 +79,7 @@ const GameUnlocked = () => {
             duration: 0.8
           }}
         >
-          <h1>🎊 GAME DÉBLOQUÉE! 🎊</h1>
+          <h1>GAME DÉBLOQUÉE</h1>
         </motion.div>
 
         {/* Sous-titre animé */}

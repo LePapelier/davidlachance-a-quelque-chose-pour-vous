@@ -39,7 +39,7 @@
 
 /* Titre explosif */
 .explosive-title h1 {
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 900;
   margin-bottom: 1rem;
   background: linear-gradient(90deg, #ff00cc, #3333ff, #00ccff);
@@ -47,12 +47,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  letter-spacing: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  letter-spacing: 1px;
   padding: 0 1rem;
   animation: titlePop 0.8s ease-out, titlePulse 2s ease-in-out infinite 1s;
+  text-align: center;
+  line-height: 1.2;
 }
 
 @keyframes titlePop {
@@ -451,7 +450,7 @@
   }
   
   .explosive-title h1 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
   
   .congrats-text {
