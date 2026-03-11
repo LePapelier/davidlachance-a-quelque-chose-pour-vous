@@ -255,15 +255,28 @@
   }
   
   .open-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.1rem;
-    min-width: 200px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    min-width: 180px;
   }
   
   .button-text {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     white-space: normal;
     overflow-wrap: break-word;
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .open-button {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+    min-width: 160px;
+  }
+  
+  .button-text {
+    font-size: 1rem;
   }
 }

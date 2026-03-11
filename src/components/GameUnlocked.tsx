@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import CROUSLogos from './CROUSLogos';
+import DavidLaChanceLetters from './DavidLaChanceLetters';
 
 import './GameUnlocked.css';
 
@@ -63,6 +64,7 @@ const GameUnlocked = () => {
   return (
     <div className="game-unlocked-container">
       <CROUSLogos />
+      <DavidLaChanceLetters />
       
       <div className="game-content-wrapper">
         {/* Titre explosif */}
@@ -162,7 +164,7 @@ const GameUnlocked = () => {
           transition={{ delay: 3, duration: 1 }}
         >
           <p className="back-text">
-             💫 C'est parti... Prépare tes meilleurs mots!
+             💫 Prépare tes meilleurs words!
           </p>
         </motion.div>
       </div>

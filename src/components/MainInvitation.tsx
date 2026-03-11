@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AnimatedTitle from './AnimatedTitle';
-import ScrabbleLetters from './ScrabbleLetters';
+import DavidLaChanceLetters from './DavidLaChanceLetters';
 import CROUSLogos from './CROUSLogos';
 import GameUnlocked from './GameUnlocked';
 import './MainInvitation.css';
@@ -89,7 +89,7 @@ const MainInvitation = () => {
   return (
     <div className="main-container">
       <CROUSLogos />
-      <ScrabbleLetters count={30} />
+      <DavidLaChanceLetters />
       
       <div className="content-wrapper">
         <AnimatedTitle />
@@ -150,7 +150,7 @@ const MainInvitation = () => {
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{ repeat: Infinity, duration: 3 }}
         >
-          ⚡ David La Chance te kiffe pour une partie trop stylée fréro !
+          ⚡ David La Chance te kiffe pour une partie trop stylée !
         </motion.p>
       </div>
     </div>

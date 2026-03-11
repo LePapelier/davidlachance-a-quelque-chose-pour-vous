@@ -31,9 +31,7 @@ const SimpleHomePage = ({ onDiscover }: SimpleHomePageProps) => {
         </button>
         
         <div className="simple-footer">
-          <p className="simple-hint">
-            (c'est un site éclaté au sol, désolé)
-          </p>
+
         </div>
       </div>
     </div>

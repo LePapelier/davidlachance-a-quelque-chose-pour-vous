@@ -39,7 +39,7 @@
 
 /* Titre explosif */
 .explosive-title h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 900;
   margin-bottom: 1rem;
   background: linear-gradient(90deg, #ff00cc, #3333ff, #00ccff);
@@ -47,11 +47,23 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 1rem;
+  animation: titlePop 0.8s ease-out, titlePulse 2s ease-in-out infinite 1s;
+}
+
+@keyframes titlePop {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes titlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 /* Sous-titre animé */

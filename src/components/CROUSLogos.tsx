@@ -39,7 +39,11 @@ const CROUSLogos = () => {
             rotate: [0, -5, 5, 0],
             transition: { duration: 0.4 }
           }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ 
+            scale: [1, 1.2, 1],
+            rotate: [0, -15, 15, -15, 0],
+            transition: { duration: 0.4 }
+          }}
         >
           {/* Logo CROUS réel */}
           <div className="logo-placeholder">
